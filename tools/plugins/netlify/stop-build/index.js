@@ -1,5 +1,5 @@
 module.exports = {
-  onPreBuild: () => {
-    console.log('Hello world from the plugin!')
+  onPreBuild: ({ utils }) => {
+    utils.build.cancelBuild('ALERT: Cancelling both builds.');
   }
 }
