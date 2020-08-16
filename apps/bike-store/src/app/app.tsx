@@ -2,12 +2,12 @@ import React from 'react';
 
 import './app.css';
 
+import { validateBikeSerialNumber } from '@transport-stores/bike-utils';
+
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
 import { Route, Link } from 'react-router-dom';
-
-import { validateBikeSerialNumber } from '@transport-stores/bike-utils';
 
 export const App = () => {
   /*
