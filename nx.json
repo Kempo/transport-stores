@@ -5,21 +5,41 @@
   },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     "nx.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "accessToken": "ZGQwZTEwYmUtMzVlNS00YjQ5LWExOWUtZWI5OTUwOGFmYTEwfHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "bike-store": {
+      "tags": []
+    },
+    "bike-store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["bike-store"]
+    },
+    "car-store": {
+      "tags": []
+    },
+    "car-store-e2e": {
+      "tags": [],
+      "implicitDependencies": ["car-store"]
+    },
+    "bike-store-api": {
+      "tags": []
+    },
+    "bike-utils": {
+      "tags": []
+    }
+  }
 }
